@@ -34,11 +34,11 @@ class PhotosList extends Component {
           <table>
           <tr><th>ID</th><th>Title</th><th>Thumbnail</th><th>Delete</th></tr>
   
-            
+            <td>
               {
                  photos.map(photos => <div key = {(photos.id)}>{photos.id}</div>)
               }
-           
+            </td>
             <td>
               {
                   photos.map(photos => <div key = {(photos.id)}>{photos.title}</div>)
@@ -54,10 +54,7 @@ class PhotosList extends Component {
                   photos.map(photos => <div key = {(photos.id)}><button onClick ={(e) => this.deleteRow(photos.id, e)}>Delete</button></div>)
               }
             </td>
-
-     
           </table>
-
         {
             errorMessage ? <div>{errorMessage}</div> : null
         }
