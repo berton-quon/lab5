@@ -6,8 +6,8 @@ import PhotosForm from './Components/PhotosForm';
 function App() {
   return (
     <div className="App">
-      <PhotosList/>
-      {/* <PhotosForm/> */}
+      {/* <PhotosList/> */}
+      <PhotosForm/>
     </div>
   );
 }
