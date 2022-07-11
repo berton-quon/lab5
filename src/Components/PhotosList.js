@@ -32,13 +32,19 @@ class PhotosList extends Component {
     return (
       <div><h1>List of Albums</h1>
           <table>
-          <tr><th>ID</th><th>Title</th><th>Thumbnail</th><th>Delete</th></tr>
+          <tr><th id="idColumn">ID</th><th id="titleColumn">Title</th><th id="thumbnailColumn">Thumbnail</th><th id="deleteColumn">Delete</th></tr>
+          </table>
   
-            <td>
+            {/* <td> */}
               {
-                 photos.map(photos => <div key = {(photos.id)}>{photos.id}</div>)
+                 photos.map(photos => <table key = {(photos.id)}>
+                  <td id="idColumn">{photos.id}</td>
+                  <td id="titleColumn">{photos.title}</td>
+                  <td id="thumbnailColumn"><img src={photos.thumbnailUrl}></img></td>
+                  <td id="deleteColumn"><button onClick ={(e) => this.deleteRow(photos.id, e)}>Delete</button></td>
+                  </table>)
               }
-            </td>
+            {/* </td>
             <td>
               {
                   photos.map(photos => <div key = {(photos.id)}>{photos.title}</div>)
@@ -53,8 +59,7 @@ class PhotosList extends Component {
               {
                   photos.map(photos => <div key = {(photos.id)}><button onClick ={(e) => this.deleteRow(photos.id, e)}>Delete</button></div>)
               }
-            </td>
-          </table>
+            </td> */}
         {
             errorMessage ? <div>{errorMessage}</div> : null
         }

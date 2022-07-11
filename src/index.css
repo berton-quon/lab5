@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: bisque;
 }
 
@@ -19,8 +19,6 @@ h1{
   color: steelblue;
 }
 table{
-  border-style: double;
-  border-color: black;
   width: 100%;
   background-color: aliceblue;
 }
@@ -28,10 +26,22 @@ th{
   background-color: brown;
 }
 td{
-  border-color: blue;
-  border-style: dashed;
-  
+  border-style: dotted;
 }
 tr{
   height: 150px;
 }
+#idColumn{
+  width: 10%;
+}
+#titleColumn{
+  width: 50%;
+}
+#thumbnailColumn{
+  width: 30%;
+}
+#deleteColumn{
+  width: 20%;
+}
+
+
